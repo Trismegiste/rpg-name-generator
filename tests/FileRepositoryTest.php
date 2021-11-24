@@ -47,10 +47,16 @@ class FileRepositoryTest extends TestCase
         $this->sut->getGivenNameListFor('robot', 'trilogy');
     }
 
-    public function testBadLang()
+    public function testBadLangSurname()
     {
         $this->expectException(OutOfBoundsException::class);
         $this->sut->getSurnameListFor('startrek');
+    }
+
+    public function testBadLangGiven()
+    {
+        $this->expectException(OutOfBoundsException::class);
+        $this->sut->getGivenNameListFor('male', 'startrek');
     }
 
 }

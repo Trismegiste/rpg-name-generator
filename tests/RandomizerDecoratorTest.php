@@ -30,4 +30,14 @@ class RandomizerDecoratorTest extends TestCase
         $this->assertNotEmpty($name);
     }
 
+    public function testFullRandom()
+    {
+        for ($k = 0; $k < 9; $k++) {
+            $name = $this->sut->getRandomSurnameFor('random');
+            $this->assertContains($name, ['Organa', 'Solo', 'Skywalker']);
+            $name = $this->sut->getRandomGivenNameFor('female', 'random');
+            $this->assertNotEmpty($name);
+        }
+    }
+
 }
