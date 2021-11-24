@@ -20,7 +20,7 @@ class FileRepository implements Repository
 
     public function __construct(string $dbFolder)
     {
-        $this->folder = $dbFolder;
+        $this->folder = ($dbFolder === '') ? dirname(__DIR__) . '/database' : $dbFolder;
     }
 
     public function getSurnameLanguage(): array
