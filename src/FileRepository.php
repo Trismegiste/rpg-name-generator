@@ -18,7 +18,7 @@ class FileRepository implements Repository
     private $cacheSurname = [];
     private $cacheGivenName = ['female' => [], 'male' => []];
 
-    public function __construct(string $dbFolder)
+    public function __construct(string $dbFolder = '')
     {
         $this->folder = ($dbFolder === '') ? dirname(__DIR__) . '/database' : $dbFolder;
     }
