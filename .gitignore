@@ -1,0 +1,4 @@
+/vendor/
+/nbproject/
+/doc/coverage/
+.phpunit.cache/
