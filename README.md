@@ -7,4 +7,4 @@ from [Mark Tasaka](https://github.com/mark-tasaka) after a heavy overhaul and wi
 (by the way, this tool is awesome)
 
 # Usage
-Go check the upgraded [https://github.com/Trismegiste/PHP-Character-Name-Generator](fork) before I've created this library.
+Go check the upgraded [fork](https://github.com/Trismegiste/PHP-Character-Name-Generator) before I've created this library.
