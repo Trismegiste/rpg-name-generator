@@ -6,5 +6,22 @@ from [Mark Tasaka](https://github.com/mark-tasaka) after a heavy overhaul and wi
 [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser) 
 (by the way, this tool is awesome)
 
+# Install
+`composer require trismegiste/rpg-name-generator
+
 # Usage
-Go check the upgraded [fork](https://github.com/Trismegiste/PHP-Character-Name-Generator) before I've created this library.
+
+See phpunit tests for how to use this library :
+```
+    $repo = new FileRepository();
+    print_r($repo->getSurnameListFor('starwars'));
+    print_r($repo->getGivenNameListFor('female', 'trilogy'));
+```
+
+RandomizerDecorator class is a decorator for adding randomizing capabilities :
+
+```
+    $repo = new RandomizerDecorator(new FileRepository());
+    print_r($repo->getSurnameListFor('random'));
+
+```
