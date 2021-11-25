@@ -6,11 +6,15 @@ from [Mark Tasaka](https://github.com/mark-tasaka) after a heavy overhaul and wi
 [nikic/PHP-Parser](https://github.com/nikic/PHP-Parser) 
 (by the way, this tool is awesome)
 
+This library is fully tested with PhpUnit, 100% code coverage.
+
 # Install
-`composer require trismegiste/rpg-name-generator
+With Composer :
+```
+composer require trismegiste/rpg-name-generator
+```
 
 # Usage
-
 See phpunit tests for how to use this library :
 ```
     $repo = new FileRepository();
@@ -25,3 +29,17 @@ RandomizerDecorator class is a decorator for adding randomizing capabilities :
     print_r($repo->getSurnameListFor('random'));
 
 ```
+
+# Test
+With PhpUnit :
+```
+vendor/bin/phpunit
+```
+
+# Code coverage
+With phpdbg :
+```
+phpdbg -qrr vendor/bin/phpunit
+firefox doc/coverage/index.html
+``` 
+
