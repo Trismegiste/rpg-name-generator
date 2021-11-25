@@ -10,13 +10,13 @@ This library is fully tested with PhpUnit, 100% code coverage.
 
 # Install
 With Composer :
-```
+```bash
 composer require trismegiste/rpg-name-generator
 ```
 
 # Usage
 See phpunit tests for how to use this library :
-```
+```php
     $repo = new FileRepository();
     print_r($repo->getSurnameListFor('starwars'));
     print_r($repo->getGivenNameListFor('female', 'trilogy'));
@@ -24,7 +24,7 @@ See phpunit tests for how to use this library :
 
 RandomizerDecorator class is a decorator for adding randomizing capabilities :
 
-```
+```php
     $repo = new RandomizerDecorator(new FileRepository());
     print_r($repo->getSurnameListFor('random'));
 
@@ -32,13 +32,13 @@ RandomizerDecorator class is a decorator for adding randomizing capabilities :
 
 # Test
 With PhpUnit :
-```
+```bash
 vendor/bin/phpunit
 ```
 
 # Code coverage
 With phpdbg :
-```
+```bash
 phpdbg -qrr vendor/bin/phpunit
 firefox doc/coverage/index.html
 ``` 
