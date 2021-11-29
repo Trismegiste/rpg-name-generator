@@ -18,16 +18,18 @@ composer require trismegiste/rpg-name-generator
 See phpunit tests for how to use this library :
 ```php
     $repo = new FileRepository();
-    print_r($repo->getSurnameListFor('starwars'));
-    print_r($repo->getGivenNameListFor('female', 'trilogy'));
+    print_r($repo->getSurnameListFor('japanese'));
+    print_r($repo->getGivenNameListFor('female', 'japanese'));
 ```
 
 RandomizerDecorator class is a decorator for adding randomizing capabilities :
 
 ```php
     $repo = new RandomizerDecorator(new FileRepository());
-    print_r($repo->getSurnameListFor('random'));
-
+    print_r($repo->getSurnameListFor('random'));  // gets the list of surnames from a random language
+    echo $repo->getRandomGivenNameFor('female', 'chinese');  // picks one random chinese female given name
+    echo $repo->getRandomSurnameFor('french');  // picks one random french surname
+    echo $repo->getRandomSurnameFor('random');  // picks one random surname from a random language (full random)
 ```
 
 # Test
